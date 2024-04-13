@@ -27,6 +27,7 @@ This commands includes
 <BR>
 
 ## Program
+### Client
 ```
 import socket 
 from pythonping import ping 
@@ -40,9 +41,8 @@ while True:
         c.send(str(ping(hostname, verbose=False)).encode()) 
     except KeyError: 
         c.send("Not Found".encode())
-        ```
 ```
-## server
+### Server
 ```
 import socket 
 s=socket.socket() 
@@ -52,13 +52,21 @@ while True:
     s.send(ip.encode()) 
     print(s.recv(1024).decode())
  ```
-## Tranceroute command
+### Tranceroute command
 ```
 from scapy.all import* 
 target = ["www.google.com"] 
 result, unans = traceroute(target,maxttl=32) 
 print(result,unans)
 ## Output
+### Client
+![image](https://github.com/Narasimhan05/4.Execution_of_NetworkCommends/assets/132819871/ad03e5b6-7b3f-4228-a920-ae0f5735b11d)
+
+### Server
+![image](https://github.com/Narasimhan05/4.Execution_of_NetworkCommends/assets/132819871/ff644186-e489-4ef6-8bfb-3ad1704cebe1)
+
+### Tranceroute
+![image](https://github.com/Narasimhan05/4.Execution_of_NetworkCommends/assets/132819871/6751da16-0fdf-46ac-8640-540219434515)
 
 ## Result
-Thus Execution of Network commands Performed 
+Thus Execution of Network commands Performed Successfully.
